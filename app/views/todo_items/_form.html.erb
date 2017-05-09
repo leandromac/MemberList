@@ -1,0 +1,10 @@
+<%= form_for([@todo_list, @todo_list.todo_items.build]) do |f| %>
+
+    <%= f.text_field :content, placeholder: "Name" %>
+    <%= f.text_field :email, placeholder: "Email" %>
+    <%= f.text_field :phone, placeholder: "Phone" %>
+    <%= f.text_field :url, placeholder: "Portfolio" %>
+    <%= f.text_field :location, placeholder: "Location" %>
+    <%= f.submit 'Create new member' %>
+
+<% end %>

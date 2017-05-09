@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UTU - Members</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+  <center>
+    <img src="http://utu.agency/wp-content/uploads/2016/07/logo.svg" width="90" height="auto" /><br>
+    <small>utu.agency</small>
+	</center>
+	
+	<%= yield %>
+</div>
+
+</body>
+</html>

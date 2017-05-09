@@ -1,0 +1,28 @@
+<div class="row clearfix">
+    <% if todo_item.completed? %>
+
+        <div class="todo_item">
+            <p style="opacity: 0.4;"><strike><%= todo_item.content %></strike></p>
+        </div>
+        <div class="trash">
+            <%= link_to todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" } do %>
+                <i style="opacity:0.4;" class="fa fa-trash"></i>
+            <% end %>
+        </div>
+    <% else %>
+        <div class="complete">
+			<p style="color:#FFF"><%= todo_item.id %></p>
+		</div>
+        <div class="todo_item">
+            <p><strong><%= todo_item.content %></strong> (<%= todo_item.location %>)<br>
+                <strong><small>phone:</small></strong> <%= todo_item.phone %>, <strong><small>email:</small></strong><%= todo_item.email %><br>
+            <strong><small>url:</small></strong> <%= todo_item.url %>
+            </p>
+        </div>
+        <div class="trash">
+            <%= link_to todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" } do %>
+                <i style="opacity:0.4;" class="fa fa-trash"></i>
+            <% end %>
+        </div>
+    <% end %>
+</div>

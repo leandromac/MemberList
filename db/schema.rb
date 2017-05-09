@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170509061915) do
+ActiveRecord::Schema.define(version: 20170509091255) do
 
   create_table "todo_items", force: :cascade do |t|
     t.string   "content"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20170509061915) do
     t.string   "url"
     t.string   "location"
     t.integer  "todo_item_id"
+    t.string   "skill"
   end
 
   add_index "todo_items", ["todo_list_id"], name: "index_todo_items_on_todo_list_id"

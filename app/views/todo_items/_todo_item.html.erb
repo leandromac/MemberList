@@ -14,7 +14,9 @@
 			<p style="color:#FFF"><%= todo_item.id %></p>
 		</div>
         <div class="todo_item">
-            <p><strong><%= todo_item.content %></strong> (<%= todo_item.location %>)<br>
+            
+
+            <p><strong><%= todo_item.content %></strong> <small>(<%= todo_item.location %>)</small><br>
                 <strong><small>phone:</small></strong> <%= todo_item.phone %>, <strong><small>email:</small></strong><%= todo_item.email %><br>
             <strong><small>url:</small></strong> <%= todo_item.url %>
             </p>
@@ -24,5 +26,6 @@
                 <i style="opacity:0.4;" class="fa fa-trash"></i>
             <% end %>
         </div>
+        
     <% end %>
 </div>
